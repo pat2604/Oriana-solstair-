@@ -1,6 +1,5 @@
 <!DOCTYPE html>  
 <html>  
-<head>
 <meta charset='UTF-8'/>  
 <meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>  
 <meta content='IE=edge' http-equiv='X-UA-Compatible'/>  
@@ -9,37 +8,59 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet">  
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">  
-
+  
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>  
-<!-- Ganti ke CSS punyamu -->
-<link href="watermark.css" rel="stylesheet" type="text/css" />  
+<link href="https://feeldreams.github.io/heihbd/style.css" rel="stylesheet" type="text/css" />  
 <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>  
 <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>  
     
+<head>  
 <title>Script HTML buat Kamu</title>  
 <link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico">  
 <meta name="description" content="HTML Replit Coding">  
+<style>  
+/* Watermark buatan sendiri */  
+.watermark {  
+    position: fixed;  
+    bottom: 8px;  
+    right: 12px;  
+    color: white;  
+    font-size: 10px;  
+    font-family: Arial, sans-serif;  
+    opacity: 0.5; /* transparan */  
+    z-index: 9999;  
+}  
+/* Kotak untuk nutup watermark lama */
+.cover-watermark {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 130px;
+    height: 25px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 5px;
+    z-index: 9998;
+}
+</style>  
 </head>  
-
 <body>  
 	  
    <!-- Ganti Audio di sini -->  
    <audio src="https://i.top4top.io/m_3500pa62g0.mp3" id="linkmp3" class="sembunyi"></audio>  
      
    <div id="bodyblur">  
-     <!-- Wallpaper -->
-     <img src="https://a.top4top.io/p_3502qlw6g0.png" id="wallpaper"/>
-     <div id="beneranblur"></div>  
+     <!-- Wallpaper --><img src="https://a.top4top.io/p_3502qlw6g0.png" id="wallpaper"/><div id="beneranblur"></div>  
    </div>  
      
    <div id='Content'>  
+  
      <div id="kadoIn">  
-       <!-- Tombol Surat -->
-       <img src="https://feeldreams.github.io/kadoin.png"/>  
+       <!-- Tombol Surat --><img src="https://feeldreams.github.io/kadoin.png"/>  
      </div>  
      <p id="ket">Silakan klik hadiah!</p>  
   
      <div class="kumpulanstiker">  
+         <!-- Stiker untuk Konten -->  
          <img src="https://feeldreams.github.io/bunga.gif" id="fotostiker"/>  
          <img src="https://feeldreams.github.io/pusn.gif" id="fotostiker1"/>  
          <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotostiker2"/>  
@@ -80,10 +101,13 @@
        <img id="stikerditolak" src="https://feeldreams.github.io/weee.gif"/>  
        <p id="kataditolak">Baiklah, kalau kamu nggak mau 😜</p>  
      </div>  
+  
    </div>  
-
+  
+   <!-- Tutup watermark lama -->
+   <div class="cover-watermark"></div>
    <!-- Watermark kamu -->
-   <div class="watermark">© Patrick</div>  
+   <div class="watermark">© Patrick</div>
   
 <script>  
   const body = document.querySelector("body");  
@@ -106,6 +130,33 @@
     if(fungsiAwal==0){  
       audio.play();fungsiAwal=1;  
       kadoIn.style="transition:all .8s ease;transform:scale(10);opacity:0";  
+      wallpaper.style="transform: scale(1.5);";  
+      ket.style="display:none";  
+      setTimeout(initengahan,300);  
+      setTimeout(inipesan,500)}}  
+    
+  async function inipesan(){  
+    var { value: nama } = await swals.fire({  
+           title: 'Namamu', input: 'text',  
+       });  
+       if(nama && nama.length < 11){  
+         window.nama = nama;  
+         vketikhalo="Hallo, " + nama + " ✨";  
+         mulainama();  
+         } else {  
+           await swals.fire('Ups!', 'Nama tidak boleh kosong atau lebih dari 10 karakter, ya!');  
+           inipesan();  
+    }  
+  }  
+  
+  var tanya = 'Kamu mau hadiah nggak? 😶️';  
+  var opstanya = 'Jawaban 😆';  
+  var tompositif = 'Mau';  
+  var tomnegatif = 'Nggak mau';  
+</script>  
+<script src="https://feeldreams.github.io/heihbd/script.js"></script>  
+</body>  
+	     </html>      kadoIn.style="transition:all .8s ease;transform:scale(10);opacity:0";  
       wallpaper.style="transform: scale(1.5);";  
       ket.style="display:none";  
       setTimeout(initengahan,300);  

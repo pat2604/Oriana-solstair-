@@ -1,148 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Script HTML buat Kamu</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Selamat Ulang Tahun 🎉</title>
+
+  <!-- CSS utama (paksa fresh load) -->
+  <link rel="stylesheet" href="https://feeldreams.github.io/heihbd/style.css?v=<?=Date.now();?>">
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js?v=<?=Date.now();?>"></script>
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js?v=<?=Date.now();?>"></script>
+  <script src="https://kit.fontawesome.com/4f3ce16e3e.js?v=<?=Date.now();?>" crossorigin="anonymous"></script>
 
   <style>
-    /* Watermark buatan sendiri */
+    body { margin:0; padding:0; font-family: Arial, sans-serif; background:#000; color:white; text-align:center; }
+    #kolombaru { list-style:none; padding:0; display:flex; justify-content:center; margin-top:20px; }
+    #kolombaru li { font-size:40px; margin:10px; cursor:pointer; }
+    #Content p { display:none; margin:10px 0; }
     .watermark {
-      position: fixed;
-      bottom: 8px;
-      right: 12px;
-      color: white;
-      font-size: 10px;
-      font-family: Arial, sans-serif;
-      opacity: 0.4;
-      z-index: 9999;
+      position: fixed; bottom: 8px; right: 12px;
+      color: white; font-size: 10px;
+      opacity: 0.4; z-index: 9999;
     }
   </style>
-
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
-  <link href="https://feeldreams.github.io/heihbd/style.css?v=<?=Date.now()?>"
-        rel="stylesheet" type="text/css" />
-  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
-  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  
-   <!-- Ganti Audio di sini -->
-   <audio src="https://i.top4top.io/m_3500pa62g0.mp3?v=<?=Date.now()?>" 
-          id="linkmp3" class="sembunyi"></audio>
-   
-   <div id="bodyblur">
-     <!-- Wallpaper -->
-     <img src="https://a.top4top.io/p_3502qlw6g0.png?v=<?=Date.now()?>" id="wallpaper"/>
-     <div id="beneranblur"></div>
-   </div>
-   
-   <div id='Content'>
+  <audio src="https://i.top4top.io/m_3500pa62g0.mp3?v=<?=Date.now();?>" id="linkmp3"></audio>
 
-     <div id="kadoIn">
-       <!-- Tombol Surat -->
-       <img src="https://feeldreams.github.io/kadoin.png?v=<?=Date.now()?>"/>
-     </div>
-     <p id="ket">Silakan klik hadiah!</p>
+  <div id="bodyblur">
+    <img src="https://a.top4top.io/p_3502qlw6g0.png?v=<?=Date.now();?>" id="wallpaper" style="width:100%;height:auto;"/>
+    <div id="beneranblur"></div>
+  </div>
 
-     <div class="kumpulanstiker">
-         <!-- Ganti stiker kalau mau -->
-         <img src="https://feeldreams.github.io/bunga.gif?v=<?=Date.now()?>" id="fotostiker"/>
-         <img src="https://feeldreams.github.io/pusn.gif?v=<?=Date.now()?>" id="fotostiker1"/>
-         <img src="https://feeldreams.github.io/pandacoklat.gif?v=<?=Date.now()?>" id="fotostiker2"/>
-         <img src="https://feeldreams.github.io/cilukba.gif?v=<?=Date.now()?>" id="fotostiker3"/>
-         <img src="https://feeldreams.github.io/pandakuning.gif?v=<?=Date.now()?>" id="fotostiker4"/>
-         <img src="https://feeldreams.github.io/emawh.gif?v=<?=Date.now()?>" id="fotostiker5"/>
-     </div>
-     
-     <p id="halo" class="halo"></p>
-     
-     <div>
-       <blockquote id='bq' data-text='㋡'>
-         <p id="kalimat">Ada sesuatu di sini!</p>
-         <p id="pesan1">Klik 4 tombol matahari di bawah ini!</p>
-         <div id="kolombaru">
-           <li id="lv1">☀️</li>
-           <li id="lv2">☀️</li>
-           <li id="lv3">☀️</li>
-           <li id="lv4">☀️</li>
-         </div>
-         <p id="pesan2">Tunggu sebentar...</p>
-         <p id="pesan3">Yeay, Teteh!</p>
-         <p id="pesan4">Selamat ulang tahun, </p>
-         <p id="pesan5" class="gaya2">Makin bertambah tua aja, hehe</p>
-         <p id="pesan6" class="gaya2">Semoga panjang umur</p>
-         <p id="pesan7" class="gaya2">Selalu sehat</p>
-         <p id="pesan8" class="gaya2">Semoga di hari istimewa ini teteh menjadi pribadi yang lebih baik</p>
-         <p id="pesan9" class="gaya2">Happy Level Up Day!! 🥳</p>
-         <p id="opsL">Klik untuk melanjutkan</p>
-       </blockquote>
-     </div>
+  <div id="Content">
+    <h2>Silakan klik hadiah 🎁</h2>
+    <div id="kadoIn">
+      <img src="https://feeldreams.github.io/kadoin.png?v=<?=Date.now();?>" style="width:120px;cursor:pointer;"/>
+    </div>
+    <p id="ket">Klik gambar hadiah di atas!</p>
 
-     <div id="Tombol"><a id="By">&#128140; Lanjut</a></div>
-     <p id="katatambahan" class="sembunyi">Hehe, bohong. Di sini nggak ada apa-apa 😜</p>
-     
-     <div id="pesanditolak">
-       <img id="stikerditolak" src="https://feeldreams.github.io/weee.gif?v=<?=Date.now()?>"/>
-       <p id="kataditolak">Baiklah, kalau kamu nggak mau 😜</p>
-     </div>
-   </div>
+    <div id="kolombaru" style="display:none;">
+      <li id="lv1">☀️</li>
+      <li id="lv2">☀️</li>
+      <li id="lv3">☀️</li>
+      <li id="lv4">☀️</li>
+    </div>
 
-   <!-- Watermark kamu -->
-   <div class="watermark">© Patrick</div>
+    <p id="pesan1">Klik 4 tombol matahari di bawah ini!</p>
+    <p id="pesan2">Tunggu sebentar...</p>
+    <p id="pesan3">Yeay, Teteh! 🥳</p>
+    <p id="pesan4">Selamat ulang tahun 🎂</p>
+    <p id="pesan5">Makin bertambah tua aja, hehe</p>
+    <p id="pesan6">Semoga panjang umur 🌸</p>
+    <p id="pesan7">Sehat selalu 💖</p>
+    <p id="pesan8">Bercanda kok, hehe — hadiahnya membership di teh ori only 🎁</p>
+    <p id="pesan9">Semoga di hari istimewa ini teteh menjadi pribadi yang lebih baik 🌟</p>
+    <p id="pesan10">Happy Level Up Day!! 🥳</p>
+  </div>
 
-<script>
-  const body = document.querySelector("body");
-  const swalst = Swal.mixin({
-    timer: 2300, allowOutsideClick: false, 
-    showConfirmButton: false, timerProgressBar: true, imageHeight: 90,
-  });
-  audio = new Audio('' + linkmp3.src);
-  ftganti=0;fungsi=0;fungsiAwal=0;deffotostiker=fotostiker.src;
-  
-  function berjatuhan() {
-    const heart = document.createElement("div");
-    heart.className = "fas fa-snowflake";
-    heart.style.left = (Math.random() * 90)+"vw";
-    heart.style.animationDuration = (Math.random()*3)+2+"s";
-    body.appendChild(heart);}
-  setInterval(function() {
-    var heartArr = document.querySelectorAll(".fa-snowflake");
-    if (heartArr.length > 100) {heartArr[0].remove()}},100);
-  
-  Content.style = "opacity:1;margin-top:16vh"; 
-  const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageHeight: 80,}); 
+  <div class="watermark">© Patrick</div>
 
-  document.getElementById("kadoIn").onclick = function() {
-    if(fungsiAwal==0){
+  <script>
+    const audio = document.getElementById("linkmp3");
+    const hadiah = document.getElementById("kadoIn");
+    const kolom = document.getElementById("kolombaru");
+
+    // klik hadiah dulu
+    hadiah.onclick = () => {
       audio.play();
-      fungsiAwal=1;
-      kadoIn.style="transition:all .8s ease;transform:scale(10);opacity:0";
-      wallpaper.style="transform: scale(1.5);";
-      ket.style="display:none";
-      setTimeout(initengahan,300);
-      setTimeout(inipesan,500)
-    }
-  }
+      hadiah.style.display = "none";
+      document.getElementById("ket").style.display = "none";
+      kolom.style.display = "flex";
+      document.getElementById("pesan1").style.display = "block";
+    };
 
-  async function inipesan(){
-    var { value: nama } = await swals.fire({
-           title: 'Namamu', input: 'text',
+    // urutan pesan sesuai klik matahari
+    const pesan = ["pesan2","pesan3","pesan4","pesan5","pesan6","pesan7","pesan8","pesan9","pesan10"];
+    let step = 0;
+
+    document.querySelectorAll('#kolombaru li').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if(step < pesan.length){
+          document.getElementById(pesan[step]).style.display = "block";
+          step++;
+        }
+      });
     });
-    if(nama && nama.length < 11){
-      window.nama = nama;
-      vketikhalo="Hallo, " + nama + " ✨";
-      mulainama();
-    } else {
-      await swals.fire('Ups!', 'Nama tidak boleh kosong atau lebih dari 10 karakter, ya!');
-      inipesan();
-    }
-  }
-</script>
-<script src="https://feeldreams.github.io/heihbd/script.js?v=<?=Date.now()?>"></script>
+
+    // paksa fresh load (anti cache)
+    (function reloadCache(){
+      document.querySelectorAll('img,audio,link[rel=stylesheet],script').forEach(el=>{
+        let src = el.src || el.href;
+        if(src){
+          let fresh = src.split('?')[0] + '?v=' + Date.now();
+          if(el.tagName==="LINK") el.href=fresh;
+          else if(el.tagName==="SCRIPT") el.src=fresh;
+          else el.src=fresh;
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

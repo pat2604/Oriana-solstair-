@@ -3,31 +3,23 @@
 <meta charset='UTF-8'/>  
 <meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>  
 <meta content='IE=edge' http-equiv='X-UA-Compatible'/>  
-
-<head>  
-<title>Script HTML buat Kamu</title>  
-<link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico">  
-<meta name="description" content="HTML Replit Coding">  
-
-<!-- Script Anti Cache -->
-<script>
-  if (!window.location.search.includes("v=")) {
-    const version = new Date().getTime();
-    window.location.href = window.location.pathname + "?v=" + version;
-  }
-</script>
-
+    
 <link rel="preconnect" href="https://fonts.googleapis.com">  
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet">  
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">  
+  
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>  
 <link href="https://feeldreams.github.io/heihbd/style.css" rel="stylesheet" type="text/css" />  
-<script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>  
-<script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>  
 
-<style>  
-/* Watermark buatan sendiri */  
+<!-- Tambahan untuk hapus watermark bawaan -->
+<style>
+/* Hapus watermark bawaan dari feeldreams */
+#watermark, .credit, .feeldreams {
+  display: none !important;
+}
+
+/* Watermark buatan sendiri */
 .watermark {  
     position: fixed;  
     bottom: 8px;  
@@ -35,20 +27,26 @@
     color: white;  
     font-size: 10px;  
     font-family: Arial, sans-serif;  
-    opacity: 0.4; /* transparan */  
+    opacity: 0.4;  
     z-index: 9999;  
-}  
-</style>  
-</head>  
+}
+</style>
 
+<script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>  
+<script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>  
+    
+<head>  
+<title>Script HTML buat Kamu</title>  
+<link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico">  
+<meta name="description" content="HTML Replit Coding">  
+</head>  
 <body>  
+	  
    <!-- Ganti Audio di sini -->  
    <audio src="https://i.top4top.io/m_3500pa62g0.mp3" id="linkmp3" class="sembunyi"></audio>  
      
    <div id="bodyblur">  
-     <!-- Wallpaper -->
-     <img src="https://a.top4top.io/p_3502qlw6g0.png" id="wallpaper"/>
-     <div id="beneranblur"></div>  
+     <!-- Wallpaper --><img src="https://a.top4top.io/p_3502qlw6g0.png" id="wallpaper"/><div id="beneranblur"></div>  
    </div>  
      
    <div id='Content'>  
@@ -150,4 +148,4 @@
 </script>  
 <script src="https://feeldreams.github.io/heihbd/script.js"></script>  
 </body>  
-		 </html>
+	</html>

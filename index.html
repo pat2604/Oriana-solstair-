@@ -2,14 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting...</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 20%;
+      background: #121212;
+      color: white;
+    }
+    a {
+      color: #00c3ff;
+      text-decoration: none;
+    }
+  </style>
   <script>
-    // langsung redirect ke Risol2.html
-    window.location.replace("Risol2.html");
+    // Redirect ke foryou.html setelah halaman dimuat
+    window.onload = function() {
+      window.location.href = "foryou.html";
+    }
   </script>
 </head>
 <body>
-  <p>Redirecting ke Risol2...</p>
-  <p>Jika tidak otomatis, klik <a href="Risol2.html">di sini</a>.</p>
+  <h2>Redirecting ke halaman utama...</h2>
+  <p>Jika tidak otomatis, klik <a href="foryou.html">di sini</a>.</p>
 </body>
 </html>

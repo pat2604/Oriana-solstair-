@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Oriana</title>
+
+<style>
+body{
+  margin:0;
+  padding:0;
+  background: linear-gradient(135deg,#000000,#1a1a1a,#000000);
+  background-size:400% 400%;
+  animation:bgMove 15s ease infinite;
+  font-family:'Courier New', monospace;
+  color:white;
+  overflow-x:hidden;
+}
+
+@keyframes bgMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+.title{
+  text-align:center;
+  font-size:20px;
+  font-weight:bold;
+  letter-spacing:2px;
+  margin-top:30px;
+  background: linear-gradient(90deg,#000000,#ffd700,#000000,#ffd700);
+  background-size:300% 300%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:glowMove 4s linear infinite;
+  text-shadow:
+    0 0 5px #ffd700,
+    0 0 15px #ffcc00,
+    0 0 30px #ffaa00;
+}
+
+@keyframes glowMove{
+  0%{background-position:0% 50%;}
+  100%{background-position:100% 50%;}
+}
+
+.container{
+  padding:30px 20px 40px 20px;
+}
+
+#text{
+  font-size:16px;
+  line-height:1.7;
+  white-space:pre-wrap;
+  min-height:250px;
+}
+
+.cursor{
+  display:inline-block;
+  width:2px;
+  background:#ffd700;
+  margin-left:4px;
+  animation:blink 0.8s infinite;
+}
+
+@keyframes blink{
+  0%,100%{opacity:1;}
+  50%{opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="title">☀ FOR ORIANA SOLSTAIR ☀</h1>
+
+<div class="container">
+  <div id="text"></div><span class="cursor"></span>
+</div>
+
+<audio autoplay loop>
+  <source src="https://files.catbox.moe/egjlhl" type="audio/mpeg">
+</audio>
+
+<script>
+const message = `Teh ori, mungkin aku cuma salah satu dari banyak orang yang nonton kamu,
+tapi setiap stream dimulai rasanya selalu beda
+
+aku memang belum pernah bertemu langsung,
+dan mungkin tidak akan pernah,
+tapi suara kamu dan cara kamu bercerita
+selalu berhasil bikin suasana jadi lebih hangat
+
+ada hari hari yang terasa berat,
+lalu aku buka stream kamu,
+dan semuanya terasa sedikit lebih ringan
+
+aku tidak berharap lebih,
+aku hanya ingin kamu tahu
+bahwa dari balik layar ini
+ada seseorang yang benar benar menghargai kehadiran kamu
+
+kamu mungkin tidak sadar,
+tapi kamu sudah jadi cahaya kecil
+yang diam diam menerangi banyak orang
+termasuk aku
+TERIMAKASIH DAN LOVE U💛`;
+
+let index = 0;
+let speed = 35;
+
+function typeEffect(){
+  if(index < message.length){
+    document.getElementById("text").textContent += message.charAt(index);
+    index++;
+    setTimeout(typeEffect, speed);
+  }
+}
+
+typeEffect();
+</script>
+
+</body>
+</html>

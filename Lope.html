@@ -79,7 +79,7 @@ body{
   <div id="text"></div><span class="cursor"></span>
 </div>
 
-<audio autoplay loop>
+<audio id="bgm" loop>
   <source src="https://files.catbox.moe/egjlhl" type="audio/mpeg">
 </audio>
 
@@ -119,6 +119,13 @@ function typeEffect(){
 }
 
 typeEffect();
+
+/* Musik jalan setelah 1x sentuh layar */
+const music = document.getElementById("bgm");
+document.body.addEventListener("click", function(){
+  music.play();
+}, { once: true });
+
 </script>
 
 </body>
